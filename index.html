@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jeppe KLH – Portfolio</title>
+  <title>Jeppe Lynge – Portfolio</title>
   <meta name="description" content="Portfolio og projekter af Jeppe Lynge, datamatikerstuderende med fokus på React, C#, AI og Fullstack-utvikling." />
   
   <!-- Bootstrap CSS -->
@@ -91,7 +91,28 @@
 .border-sql      { border-color: #00758F; }
 .border-python   { border-color: #3776AB; }
 .border-ai       { border-color: #FF6F00; }
+.border-typescript { border-color: #3178C6; }
+.border-dotnet     { border-color: #512BD4; }
+.border-blazor     { border-color: #512BD4; }
+.border-wpf        { border-color: #512BD4; }
+.border-express    { border-color: #000000; }
+.border-mssql      { border-color: #CC2927; }
+.border-mysql      { border-color: #4479A1; }
+.border-mongo      { border-color: #47A248; }
+.border-actions    { border-color: #2088FF; }
+.border-azure      { border-color: #0078D4; }
+.border-git        { border-color: #F05032; }
+.border-postman    { border-color: #FF6C37; }
+.border-scikit     { border-color: #F7931E; }
+.border-pytorch    { border-color: #EE4C2C; }
+.border-ml         { border-color: #FF6F61; }
+.border-html       { border-color: #E34F26; }
+.border-css        { border-color: #1572B6; }
+.border-grafana    { border-color: #F46800; }
+.border-xml        { border-color: #E34F26; }
 
+
+    
 .tech-badge:hover {
   transform: scale(1.05);
   border-color: white;
@@ -169,66 +190,63 @@
 
 <section id="skills" class="mb-5">
   <h2 class="mb-4 border-bottom pb-2 text-white">Tekniske Kompetencer</h2>
+
+  <h5 class="text-secondary mt-4 mb-3">Programmeringssprog</h5>
   <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
-    
-    <div class="col">
-      <div class="tech-badge border-csharp">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
-        <span>C# / .NET</span>
-      </div>
-    </div>
+    <div class="col"><div class="tech-badge border-csharp"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" /><span>C#</span></div></div>
+    <div class="col"><div class="tech-badge border-python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><span>Python</span></div></div>
+    <div class="col"><div class="tech-badge border-js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /><span>JavaScript</span></div></div>
+    <div class="col"><div class="tech-badge border-typescript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /><span>TypeScript</span></div></div>
+    <div class="col"><div class="tech-badge border-sql"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" /><span>SQL</span></div></div>
+    <div class="col"><div class="tech-badge border-xml"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="XML" /><span>XML</span></div></div>
+  </div>
 
-    <div class="col">
-      <div class="tech-badge border-react">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
-        <span>React</span>
-      </div>
-    </div>
+  <h5 class="text-secondary mt-5 mb-3">Frameworks & Libraries</h5>
+  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+    <div class="col"><div class="tech-badge border-dotnet"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET" /><span>.NET</span></div></div>
+    <div class="col"><div class="tech-badge border-blazor"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt="Blazor" /><span>Blazor</span></div></div>
+    <div class="col"><div class="tech-badge border-wpf"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="WPF" /><span>WPF</span></div></div>
+    <div class="col"><div class="tech-badge border-react"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /><span>React</span></div></div>
+    <div class="col"><div class="tech-badge border-node"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /><span>Node.js</span></div></div>
+    <div class="col"><div class="tech-badge border-express"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" /><span>Express</span></div></div>
+  </div>
 
-    <div class="col">
-      <div class="tech-badge border-js">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
-        <span>JavaScript</span>
-      </div>
-    </div>
+  <h5 class="text-secondary mt-5 mb-3">Databaser</h5>
+  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+    <div class="col"><div class="tech-badge border-mssql"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" /><span>SQL Server</span></div></div>
+    <div class="col"><div class="tech-badge border-mysql"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /><span>MySQL</span></div></div>
+    <div class="col"><div class="tech-badge border-mongo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /><span>MongoDB</span></div></div>
+  </div>
 
-    <div class="col">
-      <div class="tech-badge border-node">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
-        <span>Node.js</span>
-      </div>
-    </div>
+  <h5 class="text-secondary mt-5 mb-3">DevOps & Cloud</h5>
+  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+    <div class="col"><div class="tech-badge border-docker"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /><span>Docker</span></div></div>
+    <div class="col"><div class="tech-badge border-actions"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" /><span>GitHub Actions</span></div></div>
+    <div class="col"><div class="tech-badge border-azure"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" /><span>Azure</span></div></div>
+    <div class="col"><div class="tech-badge border-git"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /><span>Git</span></div></div>
+    <div class="col"><div class="tech-badge border-postman"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" /><span>Postman</span></div></div>
+  </div>
 
-    <div class="col">
-      <div class="tech-badge border-docker">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
-        <span>Docker</span>
-      </div>
-    </div>
+  <h5 class="text-secondary mt-5 mb-3">Data Science & ML</h5>
+  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+    <div class="col"><div class="tech-badge border-ai"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" /><span>TensorFlow</span></div></div>
+    <div class="col"><div class="tech-badge border-scikit"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg" alt="Scikit-learn" /><span>Scikit-learn</span></div></div>
+    <div class="col"><div class="tech-badge border-pytorch"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" /><span>PyTorch</span></div></div>
+    <div class="col"><div class="tech-badge border-ml"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Machine Learning" /><span>Machine Learning</span></div></div>
+  </div>
 
-    <div class="col">
-      <div class="tech-badge border-sql">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
-        <span>MySQL / SQL Server</span>
-      </div>
-    </div>
+  <h5 class="text-secondary mt-5 mb-3">Web & UI</h5>
+  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+    <div class="col"><div class="tech-badge border-html"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" /><span>HTML</span></div></div>
+    <div class="col"><div class="tech-badge border-css"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" /><span>CSS</span></div></div>
+  </div>
 
-    <div class="col">
-      <div class="tech-badge border-python">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
-        <span>Python</span>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="tech-badge border-ai">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="AI" />
-        <span>AI / ML</span>
-      </div>
-    </div>
-
+  <h5 class="text-secondary mt-5 mb-3">Monitoring & Analyse</h5>
+  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+    <div class="col"><div class="tech-badge border-grafana"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana" /><span>Grafana</span></div></div>
   </div>
 </section>
+
 
 
 <section id="contact" class="mb-5">
