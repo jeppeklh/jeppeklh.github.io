@@ -1,66 +1,96 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jeppe KLH – Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Portfolio og projekter af Jeppe KLH, datamatikerstuderende med fokus på React, C#, AI og Fullstack-utvikling.">
+  <meta name="description" content="Portfolio og projekter af Jeppe KLH, datamatikerstuderende med fokus på React, C#, AI og Fullstack-utvikling." />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Evt. egen CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Jeppe KLH</h1>
-    <p>Datamatikerstuderende | Softwareudvikling | AI & Fullstack</p>
-    <nav>
-      <a href="#about">Om mig</a>
-      <a href="#projects">Projekter</a>
-      <a href="#skills">Kompetencer</a>
-      <a href="#contact">Kontakt</a>
+
+  <header class="bg-white shadow-sm mb-4">
+    <nav class="container navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand fw-bold fs-3" href="#">Jeppe KLH</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">Om mig</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projekter</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Kompetencer</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
     </nav>
+    <div class="text-center py-3 bg-light">
+      <p class="mb-0 fs-5 text-secondary">Datamatikerstuderende | Softwareudvikling | AI & Fullstack</p>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>Om mig</h2>
-    <p>Jeg er datamatikerstuderende på UCL København, med interesse for app-udvikling, AI og fullstack-projekter. Jeg elsker at bygge brugervenlige løsninger og lære nye teknologier.</p>
-  </section>
+  <main class="container">
 
-  <section id="projects">
-    <h2>Projekter</h2>
-    <ul>
-      <li>
-        <h3>Skemaplanlægningsprogram</h3>
-        <p><strong>Teknologier:</strong> C#, WPF, SQL</p>
-        <a href="https://github.com/jeppeklh/skemaplanlaegning">Se kode på GitHub</a>
-      </li>
-      <li>
-        <h3>Rejsebooking Web App</h3>
-        <p><strong>Teknologier:</strong> Blazor (.NET C#), HTML, CSS, SQL, REST API</p>
-        <a href="https://github.com/jeppeklh/rejsebooking">Se kode på GitHub</a>
-      </li>
-      <!-- Tilføj flere projekter her -->
-    </ul>
-  </section>
+    <section id="about" class="mb-5">
+      <h2 class="mb-3 border-bottom border-primary pb-2">Om mig</h2>
+      <p>Jeg er datamatikerstuderende på UCL København, med interesse for app-udvikling, AI og fullstack-projekter. Jeg elsker at bygge brugervenlige løsninger og lære nye teknologier.</p>
+    </section>
 
-  <section id="skills">
-    <h2>Tekniske Kompetencer</h2>
-    <ul>
-      <li>C# / .NET / WPF</li>
-      <li>React / JavaScript / TypeScript</li>
-      <li>Node.js / Express / MongoDB / GraphQL</li>
-      <li>Docker / CI/CD / GitHub Actions</li>
-      <li>Machine Learning / AI</li>
-      <!-- Udvid efter behov -->
-    </ul>
-  </section>
+    <section id="projects" class="mb-5">
+      <h2 class="mb-4 border-bottom border-primary pb-2">Projekter</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title h5">Skemaplanlægningsprogram</h3>
+              <p><strong>Teknologier:</strong> C#, WPF, SQL</p>
+              <a href="https://github.com/jeppeklh/skemaplanlaegning" class="btn btn-primary btn-sm">Se kode på GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title h5">Rejsebooking Web App</h3>
+              <p><strong>Teknologier:</strong> Blazor (.NET C#), HTML, CSS, SQL, REST API</p>
+              <a href="https://github.com/jeppeklh/rejsebooking" class="btn btn-primary btn-sm">Se kode på GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Tilføj flere projekter i samme stil -->
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:jeppeklh@hotmail.com">jeppeklh@hotmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/jeppeklh">linkedin.com/in/jeppeklh</a></p>
-  </section>
+    <section id="skills" class="mb-5">
+      <h2 class="mb-4 border-bottom border-primary pb-2">Tekniske Kompetencer</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col"><div class="p-3 bg-primary text-white rounded text-center">C# / .NET / WPF</div></div>
+        <div class="col"><div class="p-3 bg-primary text-white rounded text-center">React / JavaScript / TypeScript</div></div>
+        <div class="col"><div class="p-3 bg-primary text-white rounded text-center">Node.js / Express / MongoDB / GraphQL</div></div>
+        <div class="col"><div class="p-3 bg-primary text-white rounded text-center">Docker / CI/CD / GitHub Actions</div></div>
+        <div class="col"><div class="p-3 bg-primary text-white rounded text-center">Machine Learning / AI</div></div>
+        <!-- Udvid efter behov -->
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Jeppe KLH</p>
+    <section id="contact" class="mb-5">
+      <h2 class="mb-3 border-bottom border-primary pb-2">Kontakt</h2>
+      <p>Email: <a href="mailto:jeppeklh@hotmail.com" class="text-decoration-none">jeppeklh@hotmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/jeppeklh" target="_blank" class="text-decoration-none">linkedin.com/in/jeppeklh</a></p>
+    </section>
+
+  </main>
+
+  <footer class="text-center py-3 bg-light">
+    <p class="mb-0">&copy; 2025 Jeppe KLH</p>
   </footer>
+
+  <!-- Bootstrap JS + Popper (til navbar toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
