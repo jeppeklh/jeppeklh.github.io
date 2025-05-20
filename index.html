@@ -97,6 +97,21 @@
   border-color: white;
 }
 
+    .contact-link {
+  color: #ff4c4c;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #ff1a1a;
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
@@ -216,14 +231,17 @@
 </section>
 
 
-    <section id="contact" class="mb-5">
-     <a href="mailto:jeppeklh@hotmail.com" class="contact-link">
-  <i class="bi bi-envelope-fill me-2"></i> jeppeklh@hotmail.com
-</a>
-<a href="https://www.linkedin.com/in/jeppeklh" target="_blank" rel="noopener" class="contact-link">
-  <i class="bi bi-linkedin me-2"></i> linkedin.com/in/jeppeklh
-</a>
-    </section>
+<section id="contact" class="mb-5">
+  <h2 class="mb-3 border-bottom pb-2 text-white">Kontakt</h2>
+  <div class="d-flex flex-column gap-2">
+    <a href="mailto:jeppeklh@hotmail.com" class="contact-link">
+      <i class="bi bi-envelope-fill me-2"></i> jeppeklh@hotmail.com
+    </a>
+    <a href="https://www.linkedin.com/in/jeppeklh" target="_blank" rel="noopener" class="contact-link">
+      <i class="bi bi-linkedin me-2"></i> linkedin.com/in/jeppeklh
+    </a>
+  </div>
+</section>
 
   </main>
 
