@@ -287,3 +287,12 @@ a.text-decoration-none:hover {
     transform: scale(1.05);
     transition: transform 0.2s ease;
 }
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(255, 76, 76, 0.4); /* match din farvepalette */
+}
