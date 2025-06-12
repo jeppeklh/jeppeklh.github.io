@@ -1,0 +1,8 @@
+.video-wrapper video {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-wrapper video:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(255, 76, 76, 0.4);
+}
