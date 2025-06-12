@@ -13,229 +13,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
-
-
-  <style>
-    body {
-      background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
-      color: #eee;
-      min-height: 100vh;
-    }
-
-    header,
-    footer {
-      background: #111;
-      color: #eee;
-    }
-
-    .navbar-light .navbar-nav .nav-link {
-      color: #eee;
-      transition: color 0.3s;
-    }
-
-    .navbar-light .navbar-nav .nav-link:hover,
-    .navbar-light .navbar-nav .nav-link:focus {
-      color: #ff4c4c;
-    }
-
-    .navbar-brand {
-      color: #ff4c4c !important;
-    }
-
-    h2 {
-      border-color: #ff4c4c !important;
-    }
-
-    .card {
-      background: #222;
-      border: 1px solid #ff4c4c;
-      color: #eee;
-    }
-
-    .btn-primary {
-      background: linear-gradient(45deg, #ff4c4c, #b22222);
-      border: none;
-      transition: background 0.3s ease;
-    }
-
-    .btn-primary:hover,
-    .btn-primary:focus {
-      background: linear-gradient(45deg, #b22222, #ff4c4c);
-      color: #fff;
-    }
-
-    .bg-primary {
-      background: linear-gradient(45deg, #ff4c4c, #b22222) !important;
-      color: #fff !important;
-    }
-
-    a.text-decoration-none {
-      color: #ff4c4c;
-    }
-
-    a.text-decoration-none:hover {
-      text-decoration: underline;
-      color: #ff1a1a;
-    }
-
-    .tech-badge {
-      background-color: #1a1a1a;
-      border: 2px solid transparent;
-      border-radius: 0.75rem;
-      padding: 1rem;
-      text-align: center;
-      color: white;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .tech-badge img {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 0.5rem;
-    }
-
-    .tech-badge span {
-      display: block;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    .tech-badge img.invert-on-dark {
-      filter: invert(1);
-    }
-
-    .tech-badge img.white-bg {
-      background-color: white;
-      padding: 4px;
-      border-radius: 4px;
-    }
-
-    .tech-badge:hover {
-      transform: scale(1.05);
-      border-color: white;
-    }
-
-    .contact-link {
-      color: #ff4c4c;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      transition: color 0.2s ease;
-    }
-
-    .contact-link:hover {
-      color: #ff1a1a;
-      text-decoration: underline;
-    }
-
-    /* Border color classes */
-    .border-csharp {
-      border-color: #823085;
-    }
-
-    .border-react {
-      border-color: #61DAFB;
-    }
-
-    .border-js {
-      border-color: #F7DF1E;
-    }
-
-    .border-node {
-      border-color: #339933;
-    }
-
-    .border-docker {
-      border-color: #2496ED;
-    }
-
-    .border-sql {
-      border-color: #00758F;
-    }
-
-    .border-python {
-      border-color: #3776AB;
-    }
-
-    .border-ai {
-      border-color: #FF6F00;
-    }
-
-    .border-typescript {
-      border-color: #3178C6;
-    }
-
-    .border-dotnet {
-      border-color: #3178C6;
-    }
-
-    .border-blazor {
-      border-color: #682876;
-    }
-
-    .border-wpf {
-      border-color: #3178C6;
-    }
-
-    .border-express {
-      border-color: #ffffff;
-    }
-
-    .border-mssql {
-      border-color: #CC2927;
-    }
-
-    .border-mysql {
-      border-color: #4479A1;
-    }
-
-    .border-mongo {
-      border-color: #47A248;
-    }
-
-    .border-actions {
-      border-color: #ffffff;
-    }
-
-    .border-azure {
-      border-color: #0078D4;
-    }
-
-    .border-git {
-      border-color: #F05032;
-    }
-
-    .border-postman {
-      border-color: #FF6C37;
-    }
-
-    .border-scikit {
-      border-color: #F7931E;
-    }
-
-    .border-pytorch {
-      border-color: #EE4C2C;
-    }
-
-    .border-html {
-      border-color: #E34F26;
-    }
-
-    .border-css {
-      border-color: #1572B6;
-    }
-
-    .border-grafana {
-      border-color: #F46800;
-    }
-  </style>
 </head>
+
+
 
 <body>
 
-  <header class="bg-dark shadow-sm mb-4">
+  <header class="bg-dark shadow-sm mb-4 border-bottom border-secondary">
     <nav class="container navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand fw-bold fs-3" href="#">Jeppe Lynge</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -252,11 +36,10 @@
       </div>
     </nav>
     <div class="text-center py-3 bg-dark">
-      <p class="mb-0 fs-5 text-secondary" style="color: #ff6b6b;">
-        Datamatikerstuderende | Fullstack | AI & Machine Learning
-      </p>
+      <p id="typewriter" class="mb-0 fs-5" style="color: #ff6b6b; min-height: 1.5em;"></p>
     </div>
   </header>
+
 
   <main class="container">
 
@@ -270,9 +53,18 @@
       <h2 class="mb-4 border-bottom pb-2">Projekter</h2>
       <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
-          <div class="card h-100 shadow-sm">
+          <div class="card h-100 shadow-sm border border-danger" style="background-color: #1e1e1e;">
             <div class="card-body">
-              <h3 class="card-title h5">Ferieplanlægning Web App</h3>
+              <h3 class="card-title h5">Ferieplanlægning for Alfa Laval</h3>
+              <p class="card-text">
+                I samarbejde med Alfa Laval Kolding har vi udviklet et digitalt værktøj, der effektiviserer
+                virksomhedens
+                ferieplanlægning for lageransatte.
+                Det erstatter manuelle processer og Excel-ark med et brugervenligt
+                system, som ved hjælp af en specialdesignet algoritme automatisk genererer ferieplaner baseret på
+                medarbejdernes ønsker, tidligere ferier, minimumsbemanding og kompetencekrav. Løsningen eksporterer
+                data til Excel og reducerer den administrative arbejdstid fra uger til minutter.
+              </p>
               <p><strong>Teknologier:</strong>
                 <img src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white" alt="C#" />
                 <img src="https://img.shields.io/badge/WPF-512BD4?logo=windows&logoColor=white" alt="WPF" />
@@ -288,11 +80,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 shadow-sm border-0" style="background-color: #1e1e1e;">
+          <div class="card h-100 shadow-sm border border-danger" style="background-color: #1e1e1e;">
             <div class="card-body">
               <h3 class="card-title h5 text-white">Rejsebooking Web App</h3>
               <p class="card-text">
-                En rejseplatform udviklet for virksomheden GodTur, der samler fly- og hoteldata i én samlet rejsepakke
+                En rejseplatform udviklet for virksomheden Gotorz, der samler fly- og hoteldata i én samlet rejsepakke
                 via API-integration.
                 Brugeren møder en enkel og overskuelig bookingoplevelse med login, chat og sikker betaling.
                 Systemet er udviklet med Blazor og ASP.NET Core og er klar til skalerbar vækst og selvbetjening via
@@ -355,17 +147,29 @@
       <h5 class="text-secondary mt-4 mb-3">Programmeringssprog</h5>
       <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
         <div class="col">
-          <div class="tech-badge border-csharp">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
-            <span>C#</span>
+          <div class="tech-flip">
+            <div class="tech-badge front border-csharp">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
+              <span>C#</span>
+            </div>
+            <div class="tech-badge back border-csharp">
+              <p class="m-0 small">Stærk i objektorienteret programmering og backend-udvikling i C#.</p>
+            </div>
           </div>
         </div>
+
         <div class="col">
-          <div class="tech-badge border-python">
+          <div class="tech-flip">
+            <div class="tech-badge front border-python">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
             <span>Python</span>
+            </div>
+            <div class="tech-badge back border-python">
+              <p class="m-0 small">Stærk i objektorienteret programmering og backend-udvikling i C#.</p>
+            </div>
           </div>
         </div>
+        
         <div class="col">
           <div class="tech-badge border-js">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
@@ -554,6 +358,8 @@
 
   <!-- Bootstrap JS + Popper (til navbar toggler) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

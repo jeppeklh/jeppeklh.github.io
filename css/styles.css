@@ -1,8 +1,289 @@
 .video-wrapper video {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.video-wrapper video:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 20px rgba(255, 76, 76, 0.4);
+
+body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    color: #eee;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    background: #111;
+    color: #eee;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #eee;
+    transition: color 0.3s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: #ff4c4c;
+}
+
+.navbar-brand {
+    color: #ff4c4c !important;
+}
+
+h2 {
+    border-color: #ff4c4c !important;
+}
+
+.card {
+    background: #222;
+    border: 1px solid #ff4c4c;
+    color: #eee;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #ff4c4c, #b22222);
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: linear-gradient(45deg, #b22222, #ff4c4c);
+    color: #fff;
+}
+
+.bg-primary {
+    background: linear-gradient(45deg, #ff4c4c, #b22222) !important;
+    color: #fff !important;
+}
+
+a.text-decoration-none {
+    color: #ff4c4c;
+}
+
+a.text-decoration-none:hover {
+    text-decoration: underline;
+    color: #ff1a1a;
+}
+
+.tech-badge {
+    background-color: #1a1a1a;
+    border: 2px solid transparent;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tech-badge img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.tech-badge span {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.tech-badge img.invert-on-dark {
+    filter: invert(1);
+}
+
+.tech-badge img.white-bg {
+    background-color: white;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.tech-badge:hover {
+    transform: scale(1.05);
+    border-color: white;
+}
+
+.contact-link {
+    color: #ff4c4c;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: #ff1a1a;
+    text-decoration: underline;
+}
+
+/* Border color classes */
+.border-csharp {
+    border-color: #823085;
+}
+
+.border-react {
+    border-color: #61DAFB;
+}
+
+.border-js {
+    border-color: #F7DF1E;
+}
+
+.border-node {
+    border-color: #339933;
+}
+
+.border-docker {
+    border-color: #2496ED;
+}
+
+.border-sql {
+    border-color: #00758F;
+}
+
+.border-python {
+    border-color: #3776AB;
+}
+
+.border-ai {
+    border-color: #FF6F00;
+}
+
+.border-typescript {
+    border-color: #3178C6;
+}
+
+.border-dotnet {
+    border-color: #3178C6;
+}
+
+.border-blazor {
+    border-color: #682876;
+}
+
+.border-wpf {
+    border-color: #3178C6;
+}
+
+.border-express {
+    border-color: #ffffff;
+}
+
+.border-mssql {
+    border-color: #CC2927;
+}
+
+.border-mysql {
+    border-color: #4479A1;
+}
+
+.border-mongo {
+    border-color: #47A248;
+}
+
+.border-actions {
+    border-color: #ffffff;
+}
+
+.border-azure {
+    border-color: #0078D4;
+}
+
+.border-git {
+    border-color: #F05032;
+}
+
+.border-postman {
+    border-color: #FF6C37;
+}
+
+.border-scikit {
+    border-color: #F7931E;
+}
+
+.border-pytorch {
+    border-color: #EE4C2C;
+}
+
+.border-html {
+    border-color: #E34F26;
+}
+
+.border-css {
+    border-color: #1572B6;
+}
+
+.border-grafana {
+    border-color: #F46800;
+}
+
+#typewriter::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+/*blinking cursor for typewriter paragraph */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* For flipping kompetence cards */
+.tech-flip {
+    position: relative;
+    perspective: 1000px;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.tech-flip .tech-badge {
+    backface-visibility: hidden;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tech-flip .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.tech-flip .back {
+    transform: rotateY(180deg);
+    opacity: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.75rem;
+}
+
+.tech-flip.flipped .front {
+    transform: rotateY(180deg);
+    opacity: 0;
+    z-index: 1;
+}
+
+.tech-flip.flipped .back {
+    transform: rotateY(0deg);
+    opacity: 1;
+    z-index: 2;
+}
+
+.tech-flip:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
 }
