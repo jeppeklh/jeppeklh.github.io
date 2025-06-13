@@ -5,18 +5,22 @@
 
 body {
     background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
-    color: #eee;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f2f2f2;
     min-height: 100vh;
 }
 
 header,
 footer {
-    background: #111;
-    color: #eee;
+    background: linear-gradient(90deg, #1e1e1e, #2b2b2b);
+
+    color: #f2f2f2;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #eee;
+    color: #f2f2f2;
     transition: color 0.3s;
 }
 
@@ -36,19 +40,24 @@ h2 {
 .card {
     background: #222;
     border: 1px solid #ff4c4c;
-    color: #eee;
+    color: #f2f2f2;
 }
+
+
 
 .btn-primary {
-    background: linear-gradient(45deg, #ff4c4c, #b22222);
-    border: none;
-    transition: background 0.3s ease;
+  background: linear-gradient(to right, #ff4c4c, #ff5e41);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 1000px;
+  box-shadow: 0 4px 10px rgba(255, 76, 76, 0.3);
+  transition: all 0.3s ease;
 }
-
-.btn-primary:hover,
-.btn-primary:focus {
-    background: linear-gradient(45deg, #b22222, #ff4c4c);
-    color: #fff;
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 76, 76, 0.5);
 }
 
 .bg-primary {
@@ -289,10 +298,40 @@ a.text-decoration-none:hover {
 }
 
 .project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 10px rgba(255, 76, 76, 0.4); /* match din farvepalette */
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px rgba(255, 76, 76, 0.4);
+    /* match din farvepalette */
 }
+
+@media (max-width: 576px) {
+
+    .tech-flip,
+    .tech-badge {
+        height: 160px;
+    }
+
+    .tech-badge {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tech-badge img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .tech-badge span {
+        font-size: 0.9rem;
+    }
+
+    .tech-flip .back p {
+        font-size: 0.8rem;
+    }
+}
+
