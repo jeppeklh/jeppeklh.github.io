@@ -22,9 +22,19 @@
 
 <body>
 
+  <!-- Decorative background shapes -->
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
   <header class="bg-dark shadow-sm mb-4 border-bottom border-secondary">
     <nav class="container navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand fw-bold fs-3" href="#">Jeppe Lynge</a>
+      <a class="navbar-brand" href="#">
+        <img src="images/name-logo.png" alt="Jeppe Lynge Logo" style="height: 64px; width: auto;" />
+      </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
@@ -38,11 +48,11 @@
         </ul>
       </div>
     </nav>
-    <div class="text-center py-3 bg-dark">
-      <p id="typewriter" class="mb-0 fs-5" style="color: #ff6b6b; min-height: 1.5em;"></p>
-    </div>
   </header>
 
+  <div class="text-center py-3 typewriter-wrapper">
+    <p id="typewriter" class="mb-0 fs-5" style="color: #ff6b6b; min-height: 1.5em;"></p>
+  </div>
 
   <main class="container">
 
@@ -50,7 +60,7 @@
       <h2 class="mb-4 border-bottom pb-2 text-white">Om mig</h2>
       <div class="bg-dark rounded-3 p-4 shadow-sm border border-secondary">
         <p class="mb-4">
-          Jeg hedder <strong>Jeppe Lynge</strong> og er datamatikerstuderende på <strong>UCL Odense</strong>.
+          Jeg hedder <strong>Jeppe Lynge Hansen</strong> og er datamatikerstuderende på <strong>UCL Odense</strong>.
           Jeg har en særlig interesse for <strong>app‑udvikling</strong>, <strong>AI</strong>
           og <strong>fullstack‑udvikling</strong>, og jeg motiveres af at løse konkrete problemer med teknologi.
           <br>

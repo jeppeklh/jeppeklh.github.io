@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rejsebooking Web App – Projekt</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body class="bg-dark text-white">
+  <!-- Decorative background shapes -->
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
 
   <main class="container py-5">
     <a href="index.html" class="btn btn-outline-light mb-4">&larr; Tilbage til forsiden</a>
@@ -25,7 +35,8 @@
     <h5>Beskrivelse</h5>
     <p>
       Brugeren møder en enkel og overskuelig bookingoplevelse med login, chat og sikker betaling.
-      Systemet er udviklet med Blazor og ASP.NET Core og er klar til skalerbar vækst og selvbetjening via Gotorz-platformen.
+      Systemet er udviklet med Blazor og ASP.NET Core og er klar til skalerbar vækst og selvbetjening via
+      Gotorz-platformen.
     </p>
 
     <h5>Teknologier</h5>
@@ -40,8 +51,67 @@
     <a href="https://github.com/jeppeklh/rejsebooking" class="btn btn-primary" target="_blank">
       Se kode på GitHub
     </a>
+
+    <section class="mt-5">
+      <h2 class="mb-5 text-center">Funktioner i Webappen</h2>
+
+      <!-- Feature 1 -->
+      <div class="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center"
+        data-aos="fade-up-left" data-aos-delay="300">
+        <div class="feature-card text-center" style="max-width: 800px;">
+          <img src="images/login-screenshot.jpg" class="img-fluid rounded shadow mb-4" alt="Login skærm">
+          <h4 class="mb-3">Nem login og brugerhåndtering</h4>
+          <p>Brugerne logger nemt ind via en intuitiv og sikker grænseflade. Systemet understøtter
+            adgangskodebeskyttelse og session management.</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center"
+        data-aos="fade-up-right" data-aos-delay="300">
+        <div class="feature-card text-center" style="max-width: 800px;">
+          <img src="images/search-screenshot.jpg" class="img-fluid rounded shadow mb-4" alt="Søgefunktion">
+          <h4 class="mb-3">Avanceret søgning</h4>
+          <p>Brugeren kan søge efter rejsemuligheder med realtidsdata, som henter både fly og hoteller i én samlet
+            løsning.</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center"
+        data-aos="fade-up-left" data-aos-delay="300">
+        <div class="feature-card text-center" style="max-width: 800px;">
+          <img src="images/chat-screenshot.jpg" class="img-fluid rounded shadow mb-4" alt="Chatfunktion">
+          <h4 class="mb-3">Indbygget kundesupport via chat</h4>
+          <p>Direkte kontakt til kundeservice via en indbygget chatfunktion, hvilket øger brugervenlighed og hurtig
+            support.</p>
+        </div>
+      </div>
+
+      <!-- Feature 4 – Admin Dashboard -->
+      <div class="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center"
+        data-aos="fade-up-right" data-aos-delay="300">
+        <div class="feature-card text-center" style="max-width: 800px;">
+          <img src="images/admin-dashboard-screenshot.jpg" class="img-fluid rounded shadow mb-4" alt="Admin Dashboard">
+          <h4 class="mb-3">Admin Dashboard med sikkerhedslog</h4>
+          <p>Dashboardet viser statistik over mislykkede loginforsøg og låste brugere. IP-adresser logges, og systemet
+            reagerer automatisk ved gentagne fejl.</p>
+        </div>
+      </div>
+
+    </section>
+
+
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false
+    });
+  </script>
 </body>
+
 </html>

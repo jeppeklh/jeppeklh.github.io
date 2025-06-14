@@ -21,7 +21,6 @@ function typeWriter() {
   }
 
   typeElement.textContent = currentText;
-
   let delay = isDeleting ? 60 : 100;
 
   if (!isDeleting && currentText === fullText) {

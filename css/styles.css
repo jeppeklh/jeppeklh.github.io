@@ -2,6 +2,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+main {
+    position: relative;
+    z-index: 1;
+}
 
 body {
     background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
@@ -14,9 +18,12 @@ body {
 
 header,
 footer {
-    background: linear-gradient(90deg, #1e1e1e, #2b2b2b);
+    background: linear-gradient(to bottom, #2b2b2b 0%, #1e1e1e 100%);
 
     color: #f2f2f2;
+    max-height: 64px;
+    /* or whatever fixed height you want */
+    overflow: hidden;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -33,6 +40,10 @@ footer {
     color: #ff4c4c !important;
 }
 
+.typewriter-wrapper {
+    background: transparent;
+}
+
 h2 {
     border-color: #ff4c4c !important;
 }
@@ -46,18 +57,19 @@ h2 {
 
 
 .btn-primary {
-  background: linear-gradient(to right, #ff4c4c, #ff5e41);
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  border-radius: 1000px;
-  box-shadow: 0 4px 10px rgba(255, 76, 76, 0.3);
-  transition: all 0.3s ease;
+    background: linear-gradient(to right, #ff4c4c, #ff5e41);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 1000px;
+    box-shadow: 0 4px 10px rgba(255, 76, 76, 0.3);
+    transition: all 0.3s ease;
 }
+
 .btn-primary:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(255, 76, 76, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(255, 76, 76, 0.5);
 }
 
 .bg-primary {
@@ -335,3 +347,84 @@ a.text-decoration-none:hover {
     }
 }
 
+/* Gotorz feature design */
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.02);
+}
+
+.feature-card h4 {
+    font-weight: 700;
+}
+
+.feature-card p {
+    font-size: 1.15rem;
+    color: #ccc;
+}
+
+.bg-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.08;
+    animation: float 20s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: #6a00ff;
+    top: -100px;
+    left: -100px;
+}
+
+.shape-2 {
+    width: 350px;
+    height: 350px;
+    background: #00d4ff;
+    bottom: -80px;
+    right: -100px;
+}
+
+.shape-3 {
+    width: 250px;
+    height: 250px;
+    background: #ff007a;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    animation-delay: 10s;
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+}
