@@ -7,12 +7,20 @@ export default function Contact() {
           <i className="bi bi-envelope-fill me-2"></i> Mail
         </a>
         <a
-          href="https://www.linkedin.com/in/jeppeklh"
+          href="https://www.linkedin.com/in/jeppe-h-2723772b1/"
           target="_blank"
           rel="noopener"
           className="contact-link"
         >
           <i className="bi bi-linkedin me-2"></i> LinkedIn
+        </a>
+        <a
+          href="https://github.com/jeppeklh"
+          target="_blank"
+          rel="noopener"
+          className="contact-link"
+        >
+          <i className="bi bi-github me-2"></i> GitHub
         </a>
       </div>
     </section>
