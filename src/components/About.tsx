@@ -9,8 +9,8 @@ export default function About() {
           <div className="col-md-8" data-aos="fade-right">
             <p className="mb-4">
               Jeg hedder <strong>Jeppe Lynge Hansen</strong> og er
-              datamatikerstuderende på <strong>UCL Odense</strong>. Jeg har en
-              særlig interesse for <strong>app-udvikling</strong>,{" "}
+              datamatikerstuderende på <strong>UCL Odense</strong>. <br/> <br/>
+              Jeg har en særlig interesse for <strong>app-udvikling</strong>,{" "}
               <strong>AI</strong> og <strong>fullstack-udvikling</strong>, og
               jeg motiveres af at løse konkrete problemer med teknologi. Jeg går
               op i at skrive overskuelig og vedligeholdbar kode – med fokus på
