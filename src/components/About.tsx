@@ -1,5 +1,7 @@
 export default function About() {
-  return (
+  const photoUrl = `${import.meta.env.BASE_URL}images/ALMGreyscale.jpg`;
+
+    return (
     <section id="about" className="mb-5">
       <h2 className="mb-4 border-bottom pb-2 text-white">Om mig</h2>
       <div className="bg-dark rounded-3 p-4 shadow-sm border border-danger">
@@ -59,7 +61,7 @@ export default function About() {
 
           <div className="col-md-4 text-center" data-aos="fade-left">
             <div className="about-photo">
-              <img src="/images/ALMGreyscale.jpg" alt="Jeppe Lynge" />
+              <img src={photoUrl} alt="Jeppe Lynge" />
             </div>
           </div>
         </div>

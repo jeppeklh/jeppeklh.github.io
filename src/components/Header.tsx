@@ -5,6 +5,8 @@ export default function Header() {
   const { pathname, hash } = useLocation();
   const navigate = useNavigate();
   const collapseRef = useRef<HTMLDivElement>(null);
+  const logoUrl = `${import.meta.env.BASE_URL}images/name-logo2.png`;
+
 
   useEffect(() => {
     const el = collapseRef.current;
@@ -39,9 +41,10 @@ export default function Header() {
   return (
     <header className="bg-dark shadow-sm mb-4 border-bottom border-secondary">
       <nav className="container navbar navbar-expand-lg navbar-light">
+        
         <Link to="/" className="navbar-brand">
           <img
-            src="/images/name-logo2.png"
+            src={logoUrl}
             alt="Jeppe Lynge Logo"
             style={{ height: "48px", width: "auto" }}
           />

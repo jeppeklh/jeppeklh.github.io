@@ -1,4 +1,5 @@
 import type { Project } from "../types/project";
+const videoSrc = `${import.meta.env.BASE_URL}videos/gotorz.mp4`;
 
 export const projects: Project[] = [
   {
@@ -32,6 +33,6 @@ export const projects: Project[] = [
     Systemet er udviklet med Blazor og ASP.NET Core og er klar til skalerbar vækst og selvbetjening via Gotorz-platformen.`,
     tech: ["Blazor", "C#", "SQL", "HTML", "CSS", "Bootstrap"],
     links: [{ label: "Læs mere", href: "/projekter/rejsebooking" }],
-    videoSrc: "/videos/gotorz.mp4",
+    videoSrc: videoSrc,
   },
 ];

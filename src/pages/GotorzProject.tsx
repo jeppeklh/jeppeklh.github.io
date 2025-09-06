@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+const base = import.meta.env.BASE_URL;
+
 export default function GotorzProject() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: false });
@@ -28,7 +30,7 @@ export default function GotorzProject() {
       </p>
 
       <video className="w-100 rounded mb-4" controls>
-        <source src="/videos/gotorz.mp4" type="video/mp4" />
+        <source src={`${base}videos/gotorz.mp4`} type="video/mp4" />
         Din browser understøtter ikke videoafspilleren.
       </video>
 
@@ -83,7 +85,7 @@ export default function GotorzProject() {
         >
           <div className="feature-card text-center" style={{ maxWidth: 800 }}>
             <img
-              src="/images/login-screenshot.jpg"
+              src={`${base}images/login-screenshot.jpg`}
               className="img-fluid rounded shadow mb-4"
               alt="Login skærm"
             />
@@ -104,7 +106,7 @@ export default function GotorzProject() {
         >
           <div className="feature-card text-center" style={{ maxWidth: 800 }}>
             <img
-              src="/images/search-screenshot.jpg"
+              src={`${base}images/search-screenshot.jpg`}
               className="img-fluid rounded shadow mb-4"
               alt="Søgefunktion"
             />
@@ -124,7 +126,7 @@ export default function GotorzProject() {
         >
           <div className="feature-card text-center" style={{ maxWidth: 800 }}>
             <img
-              src="/images/chat-screenshot.jpg"
+              src={`${base}images/chat-screenshot.jpg`}
               className="img-fluid rounded shadow mb-4"
               alt="Chatfunktion"
             />
@@ -144,7 +146,7 @@ export default function GotorzProject() {
         >
           <div className="feature-card text-center" style={{ maxWidth: 800 }}>
             <img
-              src="/images/admin-dashboard-screenshot.jpg"
+              src={`${base}images/admin-dashboard-screenshot.jpg`}
               className="img-fluid rounded shadow mb-4"
               alt="Admin Dashboard"
             />

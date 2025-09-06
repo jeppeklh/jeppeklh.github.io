@@ -65,7 +65,7 @@ export default function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -85,6 +85,6 @@ export default function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
