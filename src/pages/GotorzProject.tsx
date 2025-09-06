@@ -65,15 +65,6 @@ export default function GotorzProject() {
         />
       </p>
 
-      <a
-        href="https://github.com/jeppeklh/rejsebooking"
-        className="btn btn-primary"
-        target="_blank"
-        rel="noopener"
-      >
-        Se kode på GitHub
-      </a>
-
       <section className="mt-5">
         <h2 className="mb-5 text-center">Funktioner i Webappen</h2>
 
