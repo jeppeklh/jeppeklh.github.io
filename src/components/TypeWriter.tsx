@@ -52,7 +52,7 @@ export default function Typewriter() {
       <p
         id="typewriter"
         className="mb-0 fs-5"
-        style={{ color: "#ff6b6b", minHeight: "1.5em" }}
+        style={{ color: "var(--bs-danger)", minHeight: "1.5em" }}
       >
         {text}
       </p>
