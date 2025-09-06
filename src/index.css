@@ -1,0 +1,593 @@
+/* ===== Fixes for Bootstrap defaults on dark backgrounds ===== */
+.bg-dark {
+  color: #f2f2f2 !important;
+}
+.card {
+  background: #222;
+  border: 1px solid #ff4c4c;
+  color: #f2f2f2;
+  /* Ensure Bootstrap uses these colors inside cards */
+  --bs-card-bg: #222;
+  --bs-card-color: #f2f2f2;
+}
+.dark-card {
+  background-color: #1e1e1e !important;
+  color: #f2f2f2 !important;
+  --bs-card-bg: #1e1e1e;
+  --bs-card-color: #f2f2f2;
+}
+/* Make the navbar toggler icon visible on dark bg */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ===== Your original CSS ===== */
+.video-wrapper video {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #f2f2f2;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  background: linear-gradient(to bottom, #2b2b2b 0%, #1e1e1e 100%);
+
+  color: #f2f2f2;
+  max-height: 64px;
+  /* or whatever fixed height you want */
+  overflow: hidden;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #f2f2f2;
+  transition: color 0.3s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #ff4c4c;
+}
+
+.navbar-brand {
+  color: #ff4c4c !important;
+}
+
+.typewriter-wrapper {
+  background: transparent;
+}
+
+h2 {
+  border-color: #ff4c4c !important;
+}
+
+/* (Card colors are also enforced above via --bs-card-* vars) */
+.card {
+  background: #222;
+  border: 1px solid #ff4c4c;
+  color: #f2f2f2;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #ff4c4c, #ff5e41);
+  border: none; /* remove blue border */
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  border-radius: 0.75rem; /* more subtle than 1000px pill */
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: none; /* remove default shadow */
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ff5e41, #ff4c4c);
+  transform: translateY(-2px); /* subtle hover */
+}
+
+.btn-outline-light {
+  border: 1px solid #ccc; /* neutral border */
+  color: #f2f2f2;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+.btn-outline-light:hover {
+  background: #f2f2f2;
+  color: #111;
+}
+
+.bg-primary {
+  background: linear-gradient(45deg, #ff4c4c, #b22222) !important;
+  color: #fff !important;
+}
+
+a.text-decoration-none {
+  color: #ff4c4c;
+}
+
+a.text-decoration-none:hover {
+  text-decoration: underline;
+  color: #ff1a1a;
+}
+
+.tech-badge {
+  background-color: #1a1a1a;
+  border: 2px solid transparent;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tech-badge img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.tech-badge span {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.tech-badge img.invert-on-dark {
+  filter: invert(1);
+}
+
+.tech-badge img.white-bg {
+  background-color: white;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.tech-badge:hover {
+  transform: scale(1.05);
+  border-color: white;
+}
+
+/* Shields.io badge layout inside project cards */
+.tech-shields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+}
+.tech-shield {
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+
+.contact-link {
+  color: #ff4c4c;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #ff1a1a;
+  text-decoration: underline;
+}
+
+/* Border color classes */
+.border-csharp {
+  border-color: #823085;
+}
+
+.border-react {
+  border-color: #61dafb;
+}
+
+.border-js {
+  border-color: #f7df1e;
+}
+
+.border-node {
+  border-color: #339933;
+}
+
+.border-docker {
+  border-color: #2496ed;
+}
+
+.border-sql {
+  border-color: #00758f;
+}
+
+.border-python {
+  border-color: #3776ab;
+}
+
+.border-ai {
+  border-color: #ff6f00;
+}
+
+.border-typescript {
+  border-color: #3178c6;
+}
+
+.border-dotnet {
+  border-color: #3178c6;
+}
+
+.border-blazor {
+  border-color: #682876;
+}
+
+.border-wpf {
+  border-color: #3178c6;
+}
+
+.border-express {
+  border-color: #ffffff;
+}
+
+.border-mssql {
+  border-color: #cc2927;
+}
+
+.border-mysql {
+  border-color: #4479a1;
+}
+
+.border-mongo {
+  border-color: #47a248;
+}
+
+.border-actions {
+  border-color: #ffffff;
+}
+
+.border-azure {
+  border-color: #0078d4;
+}
+
+.border-git {
+  border-color: #f05032;
+}
+
+.border-postman {
+  border-color: #ff6c37;
+}
+
+.border-scikit {
+  border-color: #f7931e;
+}
+
+.border-pytorch {
+  border-color: #ee4c2c;
+}
+
+.border-html {
+  border-color: #e34f26;
+}
+
+.border-css {
+  border-color: #1572b6;
+}
+
+.border-grafana {
+  border-color: #f46800;
+}
+
+#typewriter::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+/* blinking cursor for typewriter paragraph */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* For flipping kompetence cards */
+.tech-flip {
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  aspect-ratio: 4 / 3;
+  height: auto !important;
+}
+
+.tech-flip .tech-badge {
+  position: absolute; /* udfyld hele kortet */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem;
+  display: flex; /* centrér indhold */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  backface-visibility: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  overflow: hidden; /* klip tekst/billede der løber over */
+}
+
+.tech-flip .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+.tech-flip .back {
+  transform: rotateY(180deg);
+  opacity: 0;
+  z-index: 1;
+}
+
+.tech-flip.flipped .front {
+  transform: rotateY(180deg);
+  opacity: 0;
+  z-index: 1;
+}
+.tech-flip.flipped .back {
+  transform: rotateY(0deg);
+  opacity: 1;
+  z-index: 2;
+}
+
+.tech-flip:hover {
+  transform: scale(1.03);
+} /* lidt mere subtil end før */
+
+.tech-flip .tech-badge img {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0.5rem;
+}
+
+.tech-flip .back p {
+  margin: 0;
+  line-height: 1.3;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* justér 4–6 efter behov */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(255, 76, 76, 0.4);
+  /* match din farvepalette */
+}
+
+@media (max-width: 576px) {
+  .tech-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tech-badge img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tech-badge span {
+    font-size: 0.9rem;
+  }
+
+  .tech-flip .back p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Gotorz feature design */
+.feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: scale(1.02);
+}
+
+.feature-card h4 {
+  font-weight: 700;
+}
+
+.feature-card p {
+  font-size: 1.15rem;
+  color: #ccc;
+}
+
+.bg-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.08;
+  animation: float 20s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: #6a00ff;
+  top: -100px;
+  left: -100px;
+}
+
+.shape-2 {
+  width: 350px;
+  height: 350px;
+  background: #00d4ff;
+  bottom: -80px;
+  right: -100px;
+}
+
+.shape-3 {
+  width: 250px;
+  height: 250px;
+  background: #ff007a;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  animation-delay: 10s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+.card-text {
+  white-space: pre-line;
+}
+
+/* Masonry layout for projects */
+.masonry {
+  column-count: 1;
+  column-gap: 1rem;
+}
+@media (min-width: 768px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+.masonry-item {
+  break-inside: avoid; /* keep a card in one column */
+  -webkit-column-break-inside: avoid;
+  margin-bottom: 1rem; /* vertical gap between items */
+}
+
+/* Make cards fill column width in masonry */
+.masonry-item .card {
+  width: 100%;
+  display: inline-block; /* needed for column layout */
+}
+
+.project-card-short {
+  min-height: 300px;
+}
+
+.about-photo img {
+  max-width: 260px;
+  border-radius: 1rem;
+  border: 2px solid #ff4c4c;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+}
+
+.about-feature {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: transform 0.2s ease, border-color 0.2s ease,
+    background-color 0.2s ease;
+  cursor: default;
+}
+
+.about-feature:hover {
+  transform: translateY(-3px);
+  border-color: #ff4c4c;
+  background-color: rgba(255, 76, 76, 0.08);
+}
+
+/* Strong, final overrides for primary buttons */
+a.btn.btn-primary,
+button.btn.btn-primary,
+.btn.btn-primary {
+  /* kill Bootstrap's variable-driven blue */
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #ff4c4c;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #ff5e41;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #e84545;
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-focus-shadow-rgb: 0, 0, 0;
+
+  background-color: var(--bs-btn-bg) !important; /* belt-and-braces */
+  border-color: var(--bs-btn-border-color) !important;
+  color: var(--bs-btn-color) !important;
+  border-radius: 12px;
+  box-shadow: none !important;
+  background-image: none !important; /* ensure no gradient from elsewhere */
+}
+
+/* size variant shouldn't reintroduce borders */
+a.btn.btn-primary.btn-sm,
+button.btn.btn-primary.btn-sm,
+.btn.btn-primary.btn-sm {
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* interaction states */
+a.btn.btn-primary:hover,
+button.btn.btn-primary:hover,
+.btn.btn-primary:hover {
+  background-color: var(--bs-btn-hover-bg) !important;
+  border-color: var(--bs-btn-hover-border-color) !important;
+  transform: translateY(-1px);
+}
+
+a.btn.btn-primary:focus,
+a.btn.btn-primary:active,
+a.btn.btn-primary:focus-visible,
+button.btn.btn-primary:focus,
+button.btn.btn-primary:active,
+button.btn.btn-primary:focus-visible,
+.btn.btn-primary:focus,
+.btn.btn-primary:active,
+.btn.btn-primary:focus-visible {
+  outline: none !important;
+  box-shadow: none !important; /* kills the blue glow */
+}
+
