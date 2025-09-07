@@ -4,7 +4,7 @@ const videoSrc = `${import.meta.env.BASE_URL}videos/gotorz.mp4`;
 export const projects: Project[] = [
   {
     title: "Ferieplanlægning for Alfa Laval",
-    description: `I samarbejde med Alfa Laval Kolding har vi udviklet et digitalt værktøj, der effektiviserer virksomhedens ferieplanlægning for lageransatte. Det erstatter manuelle processer og Excel-ark med et brugervenligt system, som ved hjælp af enspecialdesignet algoritme automatisk genererer ferieplaner baseret på medarbejdernes ønsker, tidligere ferier, minimumsbemanding og kompetencekrav. 
+    description: `I samarbejde med Alfa Laval Kolding har vi udviklet et digitalt værktøj, der effektiviserer virksomhedens ferieplanlægning for lageransatte. Det erstatter manuelle processer og Excel-ark med et brugervenligt system, som ved hjælp af en specialdesignet algoritme automatisk genererer ferieplaner baseret på medarbejdernes ønsker, tidligere ferier, minimumsbemanding og kompetencekrav. 
     
     Løsningen eksporterer data til Excel og reducerer den administrative arbejdstid fra uger til minutter.`,
     tech: ["C#", "WPF", "SQL", "XML"],
