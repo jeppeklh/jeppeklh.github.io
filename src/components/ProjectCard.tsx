@@ -48,7 +48,8 @@ export default function ProjectCard({
               muted
               loop
               playsInline
-              controls
+              disablePictureInPicture
+              controlsList="nodownload noremoteplayback noplaybackrate nofullscreen"
             >
               <source src={videoSrc} type="video/mp4" />
               Din browser understøtter ikke videoafspilleren.
