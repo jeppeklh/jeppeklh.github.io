@@ -1,15 +1,20 @@
-import { skillCategories } from "../data/skills";
+import { useMemo } from "react";
+import { getSkillCategories } from "../data/skills";
 import SkillBadge from "./SkillBadge";
 import SkillFlip from "./SkillFlip";
+import { useLanguage } from "../context/LanguageContext";
+import { uiText } from "../i18n/translations";
 
 export default function Skills() {
+  const { language } = useLanguage();
+  const categories = useMemo(() => getSkillCategories(language), [language]);
+  const text = uiText.skillsSection[language];
+
   return (
     <section id="skills" className="mb-5" data-aos="fade-up">
-      <h2 className="mb-4 border-bottom pb-2 text-white">
-        Tekniske Kompetencer
-      </h2>
+      <h2 className="mb-4 border-bottom pb-2 text-white">{text.heading}</h2>
 
-      {skillCategories.map((cat) => (
+      {categories.map((cat) => (
         <div key={cat.title}>
           <h5
             className={`text-secondary ${cat.topMargin ? "mt-5" : "mt-4"} mb-3`}

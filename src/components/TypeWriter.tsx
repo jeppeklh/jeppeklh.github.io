@@ -1,51 +1,51 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { uiText } from "../i18n/translations";
 
-const roles = [
-  "Datamatikerstuderende",
-  "Fullstack Udvikler",
-  "AI & Machine Learning Entusiast",
-  "Brugercentreret Designer",
-];
-
-const TYPE_DELAY = 100; // typing speed
-const DELETE_DELAY = 60; // deleting speed
-const HOLD_FULL = 1000; // pause when fully typed
-const HOLD_EMPTY = 300; // pause before next word
+const TYPE_DELAY = 100;
+const DELETE_DELAY = 60;
+const HOLD_FULL = 1000;
+const HOLD_EMPTY = 300;
 
 export default function Typewriter() {
-  const [index, setIndex] = useState(0); // which role
-  const [charIndex, setCharIndex] = useState(0); // how many chars shown
+  const { language } = useLanguage();
+  const roles = useMemo(() => uiText.typewriterRoles[language], [language]);
+  const [index, setIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const full = roles[index];
+    setIndex(0);
+    setCharIndex(0);
+    setIsDeleting(false);
+  }, [language]);
+
+  useEffect(() => {
+    if (!roles.length) return;
+    const full = roles[index % roles.length];
     let delay = isDeleting ? DELETE_DELAY : TYPE_DELAY;
 
-    // At bounds, switch mode and set appropriate pause
     if (!isDeleting && charIndex === full.length) {
-      delay = HOLD_FULL; // hold when fully typed
-      // next tick we start deleting (do not change charIndex here)
-      const t = setTimeout(() => setIsDeleting(true), delay);
-      return () => clearTimeout(t);
+      const timeout = setTimeout(() => setIsDeleting(true), HOLD_FULL);
+      return () => clearTimeout(timeout);
     }
 
     if (isDeleting && charIndex === 0) {
-      delay = HOLD_EMPTY; // small pause when cleared
-      const t = setTimeout(() => {
+      const timeout = setTimeout(() => {
         setIsDeleting(false);
         setIndex((i) => (i + 1) % roles.length);
-      }, delay);
-      return () => clearTimeout(t);
+      }, HOLD_EMPTY);
+      return () => clearTimeout(timeout);
     }
 
-    const t = setTimeout(() => {
+    const timeout = setTimeout(() => {
       setCharIndex((c) => c + (isDeleting ? -1 : 1));
     }, delay);
 
-    return () => clearTimeout(t);
-  }, [charIndex, isDeleting, index]);
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, index, roles]);
 
-  const text = roles[index].slice(0, charIndex);
+  const text = roles.length ? roles[index % roles.length].slice(0, charIndex) : "";
 
   return (
     <div className="text-center py-3 typewriter-wrapper">

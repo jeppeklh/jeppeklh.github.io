@@ -1,6 +1,8 @@
 import type { Project } from "../types/project";
 import { SHIELDS } from "../utils/badges";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
+import { uiText } from "../i18n/translations";
 
 type Props = Pick<
   Project,
@@ -14,6 +16,9 @@ export default function ProjectCard({
   links = [],
   videoSrc,
 }: Props) {
+  const { language } = useLanguage();
+  const text = uiText.projectCard[language];
+
   return (
     <div className="card shadow-sm border border-danger dark-card">
       <div className="card-body">
@@ -52,7 +57,7 @@ export default function ProjectCard({
               controlsList="nodownload noremoteplayback noplaybackrate nofullscreen"
             >
               <source src={videoSrc} type="video/mp4" />
-              Din browser understøtter ikke videoafspilleren.
+              {text.videoFallback}
             </video>
           </div>
         )}

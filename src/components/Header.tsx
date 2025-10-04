@@ -1,22 +1,28 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { uiText } from "../i18n/translations";
+import LanguageToggle from "./LanguageToggle";
 
 export default function Header() {
   const { pathname, hash } = useLocation();
   const navigate = useNavigate();
   const collapseRef = useRef<HTMLDivElement>(null);
   const logoUrl = `${import.meta.env.BASE_URL}images/name-logo2.png`;
+  const { language } = useLanguage();
+  const text = uiText.header[language];
 
+  const closeNavbar = () => {
+    const el = collapseRef.current;
+    if (!el || !el.classList.contains("show")) return;
+    const toggler = document.querySelector<HTMLButtonElement>(
+      '[data-bs-target="#navbarNav"]'
+    );
+    toggler?.click();
+  };
 
   useEffect(() => {
-    const el = collapseRef.current;
-    if (!el) return;
-    if (el.classList.contains("show")) {
-      const toggler = document.querySelector<HTMLButtonElement>(
-        '[data-bs-target="#navbarNav"]'
-      );
-      toggler?.click();
-    }
+    closeNavbar();
   }, [pathname, hash]);
 
   const onAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -26,14 +32,13 @@ export default function Header() {
     const id = href.slice(1);
 
     if (pathname === "/") {
-      // Already on home: smooth scroll
       const target = document.getElementById(id);
       if (target) {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
         history.replaceState(null, "", `#${id}`);
+        closeNavbar();
       }
     } else {
-      // Not on home: navigate home and ask Home to scroll
       navigate("/", { state: { scrollTo: id } });
     }
   };
@@ -41,7 +46,6 @@ export default function Header() {
   return (
     <header className="bg-dark shadow-sm mb-4 border-bottom border-secondary">
       <nav className="container navbar navbar-expand-lg navbar-light">
-        
         <Link to="/" className="navbar-brand">
           <img
             src={logoUrl}
@@ -70,26 +74,29 @@ export default function Header() {
           id="navbarNav"
           ref={collapseRef}
         >
-          <ul className="navbar-nav">
+          <ul className="navbar-nav align-items-lg-center">
             <li className="nav-item">
               <a className="nav-link" href="#about" onClick={onAnchorClick}>
-                Om mig
+                {text.navAbout}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#projects" onClick={onAnchorClick}>
-                Projekter
+                {text.navProjects}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#skills" onClick={onAnchorClick}>
-                Kompetencer
+                {text.navSkills}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#contact" onClick={onAnchorClick}>
-                Kontakt
+                {text.navContact}
               </a>
+            </li>
+            <li className="nav-item mt-3 mt-lg-0 ms-lg-3">
+              <LanguageToggle className="w-100" onToggle={closeNavbar} />
             </li>
           </ul>
         </div>

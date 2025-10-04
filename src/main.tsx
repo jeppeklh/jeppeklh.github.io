@@ -9,11 +9,15 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./index.css";
 import { HashRouter } from "react-router-dom";
+import { LanguageProvider } from "./context/LanguageContext";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <LanguageProvider>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </LanguageProvider>
   </StrictMode>
 );
+
